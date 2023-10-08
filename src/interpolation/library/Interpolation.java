@@ -33,7 +33,7 @@ public class Interpolation {
 	}
 
 	/**
-	 * Interpolation function using the exponential in easing function by easing.net
+	 * Interpolation function using the exponential in easing function by easings.net
 	 *
 	 * @param {int}   a first value
 	 * @param {int}   b second value
@@ -70,7 +70,7 @@ public class Interpolation {
 
 	/**
 	 * Interpolation function using the exponential out easing function by
-	 * easing.net
+	 * easings.net
 	 *
 	 * @param {int}   a first value
 	 * @param {int}   b second value
@@ -107,7 +107,7 @@ public class Interpolation {
 
 	/**
 	 * Interpolation function using the exponential in/out easing function by
-	 * easing.net
+	 * easings.net
 	 *
 	 * @param a first value
 	 * @param b second value
@@ -177,7 +177,7 @@ public class Interpolation {
 	}
 
 	/**
-	 * Interpolation function using the quad in easing function by easing.net
+	 * Interpolation function using the quad in easing function by easings.net
 	 *
 	 * @param {int}   a first value
 	 * @param {int}   b second value
@@ -213,7 +213,7 @@ public class Interpolation {
 	}
 
 	/**
-	 * Interpolation function using the quad out easing function by easing.net
+	 * Interpolation function using the quad out easing function by easings.net
 	 *
 	 * @param {int}   a first value
 	 * @param {int}   b second value
@@ -249,7 +249,7 @@ public class Interpolation {
 	}
 
 	/**
-	 * Interpolation function using the quad in out easing function by easing.net
+	 * Interpolation function using the quad in out easing function by easings.net
 	 *
 	 * @param {int}   a first value
 	 * @param {int}   b second value
@@ -285,7 +285,7 @@ public class Interpolation {
 	}
 
 	/**
-	 * Interpolation function using the sine in easing function by easing.net
+	 * Interpolation function using the sine in easing function by easings.net
 	 *
 	 * @param {int}   a first value
 	 * @param {int}   b second value
@@ -321,7 +321,7 @@ public class Interpolation {
 	}
 
 	/**
-	 * Interpolation function using the sine out easing function by easing.net
+	 * Interpolation function using the sine out easing function by easings.net
 	 *
 	 * @param {int}   a first value
 	 * @param {int}   b second value
@@ -358,7 +358,7 @@ public class Interpolation {
 	}
 
 	/**
-	 * Interpolation function using the sine in out easing function by easing.net
+	 * Interpolation function using the sine in out easing function by easings.net
 	 *
 	 * @param a first value
 	 * @param b second value
