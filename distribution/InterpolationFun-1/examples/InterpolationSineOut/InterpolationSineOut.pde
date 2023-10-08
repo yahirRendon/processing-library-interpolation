@@ -1,5 +1,5 @@
 /******************************************************************************
- Project:  example of interpolation library using sineIn interpolation (serpIn?)
+ Project:  example of interpolation library using sine out interpolation (serpOut?)
            and inverse interpolation.
  
  Author:   Yahir
@@ -13,13 +13,13 @@
           @param {int}   b      second value
           @param {float} t      amountt between 0.0 and 1.0
           @return               value between first and second value given t
-          serpIn(int a, int b, float t)
+          serpOut(int a, int b, float t)
 
           @param {int}   a      first value
           @param {int}   b      second value
           @param {float} v      value between first and second value
-          @return               value between 0.0 and 1.0 given v per sine in easing
-          serpInInverse(int a, int b, float v)        
+          @return               value between 0.0 and 1.0 given v per sine out easing
+          serpOutInverse(int a, int b, float v)        
  ******************************************************************************/
 import interpolation.library.*;
 
@@ -50,17 +50,17 @@ void draw() {
   background(240);
   
   // interValue will be some value between 0 & 200 as t increments/decrements
-  float interpValue = interpolation.serpIn(0, 200, t);
+  float interpValue = interpolation.serpOut(0, 200, t);
   // we traverse t between 0 and 1.0 at our desired speed
   t += tSpd;
   if(t < 0 || t > 1.0) tSpd *= -1;
   
-  // ellipse moving given sine in interpolation defined above
+  // ellipse moving given liner interpolation defined above
   fill(0);
   line(100, 40, 300, 40);
   ellipse(100 + interpValue, 40, 10, 10);
   
-  // color going between 0 and 200 given sine in interpolation defined above
+  // color going between 0 and 200 given sine out interpolation defined above
   fill(interpValue);
   ellipse(200, 120, 100, 100);
      
@@ -71,12 +71,12 @@ void draw() {
   // titles
   text("i values", 100, 200);
   text("inverse values", 200, 200);
-  text("sineIn values", 300, 200);
+  text("sineOut values", 300, 200);
   
   int gap = 0;
   for(int i = 0; i <= 200; i+= 25, gap++) {
     // move through values 0 and 200 and return inverseValue between 0 and 1.0
-   float inverseValue = interpolation.serpInInverse(0, 200, i);
+   float inverseValue = interpolation.serpOutInverse(0, 200, i);
    
    // display values between 0 and 200 counting by 25
    text(i, 100, 220 + (gap * 20));
@@ -84,7 +84,7 @@ void draw() {
    // display the inverse value given i and range between 0 and 200
    text(inverseValue, 200, 220 + (gap * 20));
    
-   // feed inverseValue into sineIn interpolation to confirm they match i
-   text(interpolation.serpIn(0, 200, inverseValue), 300, 220 + (gap * 20));
+   // feed inverseValue into sine out interpolation to confirm they match i
+   text(interpolation.serpOut(0, 200, inverseValue), 300, 220 + (gap * 20));
   }
 }
